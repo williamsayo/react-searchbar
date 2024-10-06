@@ -1,0 +1,349 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 12px;
+}
+
+body {
+    height: 150vh;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    text-decoration: none;
+}
+
+.hamburger {
+    cursor: pointer;
+}
+
+.btn-text {
+    border: none;
+    background-color: transparent;
+    color: black;
+    font-size: 18px;
+    padding: 0.6rem;
+    cursor: pointer;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    justify-content: right;
+    padding: 0 25px;
+    background-color: white;
+    height: 5rem;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+        0 4px 6px -4px rgb(0 0 0 / 0.1);
+    font-size: 1.2rem;
+}
+
+.laptop {
+    display: none;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 120px auto;
+}
+
+.card form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 15px;
+    width: 80%;
+    background-color: #fff;
+    border: 3px solid grey;
+    padding: 10px 15px;
+    gap: 0.3rem;
+}
+
+.card form input,
+.card form .multiselect {
+    display: block;
+    z-index: 1111;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    width: 90%;
+    height: 50px;
+    padding: 0 5px 0 35px;
+    background-color: white;
+    border: 1px solid rgb(154, 154, 251);
+}
+
+.multiselect {
+    width: 100%;
+}
+
+.card form .multiselect {
+    width: 100%;
+    cursor: pointer;
+}
+
+.guest-dropdown {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid grey;
+    border-radius: 5px;
+    width: 20rem;
+    margin-top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.3rem;
+    padding: 10px;
+    z-index: 111111;
+}
+
+.guest-dropdown ul > li,
+.btn-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.6rem;
+    margin: 5px;
+}
+
+.card form .search-button {
+    background: rgb(123, 123, 248);
+    width: 100%;
+    border-radius: 5px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: transparent;
+    cursor: pointer;
+}
+
+.location,
+.date,
+.guests {
+    flex: 1;
+}
+
+.input-container {
+    position: relative;
+    width: 100%;
+}
+
+.input-icon {
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.label {
+    position: absolute;
+    left: 35px;
+    top: 2px;
+    background: transparent;
+    pointer-events: none;
+    font-size: 14px;
+    color: grey;
+}
+
+input:focus + .label {
+    transform: translate(-15px, -10px) scale(0.95);
+    background: white;
+    z-index: 100;
+    color: black;
+}
+
+input:focus > input::placeholder {
+    transform: translate(-15px, -12px) scale(0.95);
+    background: white;
+    z-index: 100;
+}
+
+input::placeholder {
+    display: none;
+    font-size: 1.1rem;
+}
+
+.search-container {
+    position: relative;
+}
+
+/*  */
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid grey;
+    height: auto;
+    margin: 15px 0;
+}
+
+.card-container img,
+.skeleton-image-container {
+    width: 100%;
+    height: 300px;
+}
+
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px 20px;
+}
+
+.title {
+    font-size: 22px;
+    font-weight: bolder;
+}
+
+.text-sm {
+    font-size: 18px;
+}
+
+.btn-primary {
+    padding: 10px 45px;
+    background-color: rgb(126, 126, 249);
+    border: none;
+    cursor: pointer;
+    margin: 10px 20px;
+}
+
+/*  */
+
+@media screen and (min-width: 700px) {
+    html {
+        font-size: 12px;
+    }
+
+    .card form {
+        flex-direction: row;
+    }
+
+    .input-container {
+        width: auto;
+    }
+
+    .card form input {
+        width: 10.5rem;
+    }
+    .card form .search-button {
+        width: 50px;
+        border-radius: 50%;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    html {
+        font-size: 16px;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    .card form {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .card form input {
+        width: 75%;
+    }
+
+    .card form .search-button {
+        width: 10rem;
+        border-radius: 10px;
+        color: black;
+    }
+
+    .search-icon {
+        top: 50%;
+        left: 30px;
+        pointer-events: none;
+    }
+
+    .card-container {
+        flex-direction: row;
+    }
+
+    .card-container img,
+    .skeleton-image-container {
+        width: 300px;
+    }
+}
+
+/*  skeleton */
+
+.skeleton-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(220, 220, 220);
+}
+
+.skeleton-image {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.skeleton-title {
+    width: 25rem;
+    height: 20px;
+    background-color: rgb(220, 220, 220);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.skeleton-text-sm {
+    width: 10rem;
+    height: 10px;
+    background-color: rgb(220, 220, 220);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* skeleton */
